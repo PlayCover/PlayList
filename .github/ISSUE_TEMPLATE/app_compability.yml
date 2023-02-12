@@ -1,5 +1,7 @@
 name: App Compatibility
 description: Report an app's compatibility status on PlayCover that is not a game
+title: "[Bundle-ID]: Application name"
+labels: ["app"]
 body:
   - type: input
     id: app-name
