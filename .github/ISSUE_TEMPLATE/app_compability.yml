@@ -22,6 +22,20 @@ body:
       placeholder: #### *(e.g. 2.0.4)*
     validations:
       required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: MacOS Version
+      placeholder: #### *(e.g. 13.1, Beta 13.2(22D49))*
+    validations:
+      required: true
+  - type: input
+    id: app-id
+    attributes:
+      label: Bundle ID or App Store ID
+      placeholder: #### *(e.g. com.mihoyo.genshin, 1517783697)*
+    validations:
+      required: true
   - type: textarea
     id: hardware-specs
     attributes:
