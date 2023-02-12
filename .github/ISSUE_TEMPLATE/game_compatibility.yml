@@ -61,6 +61,23 @@ body:
         - Add a zipped save file for easy access to any issues if needed, namely for situations that can only be accessed after several hours of gameplay.
     validations:
       required: true
+  - type: checkboxes
+    id: run-conditions
+    attributes:
+      label: Run conditions
+      description: Please check the conditions that the app needs to run optimally. If there are multiple combinations, specify in other run conditions.
+      options:
+        - label: SIP disabled
+        - label: PlayTools removed
+        - label: PlayChain enabled
+        - label: Jailbreak bypass enabled
+        - label: App default resolution required
+        - label: LLDB debugger enabled
+  - type: textarea
+    id: other-run-conditions
+    attributes:
+      label: "Other run conditions"
+      description: "Describe other combinations of states where the app runs well or other conditions you need for the app to run."
   - type: textarea
     id: screenshot
     attributes:
