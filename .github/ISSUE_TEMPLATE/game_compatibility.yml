@@ -1,5 +1,7 @@
 name: Game Compatibility
 description: Report a game's compatibility status on PlayCover
+title: "[Bundle-ID]: Game name"
+labels: ["game"]
 body:
   - type: input
     id: game-name
