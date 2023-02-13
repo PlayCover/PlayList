@@ -68,7 +68,9 @@ body:
       description: Please check the conditions that the app needs to run optimally. If there are multiple combinations, specify in other run conditions.
       options:
         - label: SIP disabled
+        - label: SIP enabled
         - label: PlayTools removed
+        - label: PlayTools injected
         - label: PlayChain enabled
         - label: Jailbreak bypass enabled
         - label: App default resolution required
