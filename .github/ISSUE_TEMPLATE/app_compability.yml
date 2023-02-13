@@ -1,0 +1,98 @@
+name: App Compatibility
+description: Report an app's compatibility status on PlayCover that is not a game
+title: "[Bundle-ID]: Application name"
+labels: ["app"]
+body:
+  - type: input
+    id: app-name
+    attributes:
+      label: App Name
+      placeholder: ## App Name
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App Version
+      placeholder: #### *(e.g. 1.0.0 or 1.1.3)*
+    validations:
+      required: true
+  - type: input
+    id: playcover-version
+    attributes:
+      label: PlayCover Build Version
+      placeholder: #### *(e.g. 2.0.4)*
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: MacOS Version
+      placeholder: #### *(e.g. 13.1, Beta 13.2(22D49))*
+    validations:
+      required: true
+  - type: input
+    id: app-id
+    attributes:
+      label: Bundle ID or App Store ID
+      placeholder: #### *(e.g. com.mihoyo.genshin, 1517783697)*
+    validations:
+      required: true
+  - type: textarea
+    id: hardware-specs
+    attributes:
+      label: Hardware Specs
+      value: |
+        - ##### Mac model: *(e.g. Macbook Pro)*
+        - ##### Chip model: *(e.g. M1, M2)*
+        - ##### Display size: *(e.g. 13", 16-inch)*
+    validations:
+      required: true
+  - type: textarea
+    id: app-state
+    attributes:
+      label: "App State"
+      description: "Describe the current app's state here."
+      placeholder: /
+        - Describe the current app state here. 
+        - List the issues you've noticed if there are any. 
+        - Add links to related issues from the main repository if they exist.
+        - Add links to pull requests that fix issues described if/when applicable. 
+        - Add a zipped save file for easy access to any issues if needed, namely for situations that can only be accessed after several hours of usage.
+    validations:
+      required: true
+  - type: checkboxes
+    id: run-conditions
+    attributes:
+      label: Run conditions
+      description: Please check the conditions that the app needs to run optimally. If there are multiple combinations, specify in other run conditions.
+      options:
+        - label: SIP disabled
+        - label: SIP enabled
+        - label: PlayTools removed
+        - label: PlayTools injected
+        - label: PlayChain enabled
+        - label: Jailbreak bypass enabled
+        - label: App default resolution required
+        - label: LLDB debugger enabled
+  - type: textarea
+    id: other-run-conditions
+    attributes:
+      label: "Other run conditions"
+      description: "Describe other combinations of states where the app runs well or other conditions you need for the app to run."
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshots
+      description: Add screenshots here (preferably on windowed mode) if the app is rendering.
+      placeholder: Drag and drop the images/screenshots onto the text area.
+    validations:
+      required: false
+  - type: textarea
+    id: log
+    attributes:
+      label: Log File
+      description: Any log file such as crash logs. You can find them in the Console app.
+      placeholder: Drag and drop the log file onto the text area.
+    validations:
+      required: false
